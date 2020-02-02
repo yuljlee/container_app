@@ -17,12 +17,24 @@ class MyApp extends StatelessWidget {
             width: 200.0,
             height: 200.0,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.purple[50], Colors.purple[500]]),
+              gradient: RadialGradient(
+                //begin: Alignment(0.0, -1.0),
+                //end: Alignment(0.0, -0.8),
+                tileMode: TileMode.clamp,
+                // begin: Alignment.topCenter,
+                // end: Alignment.bottomCenter,
+                //stops: [0.5, 0.6, 0.7, 0.8],
+                radius: 0.25,
+                center: Alignment(0.0, 0.5),
+                colors: [Colors.blue,
+                         Colors.green,
+                         Colors.deepPurple,
+                         Colors.pink,
+                         ]),
               color: Colors.orange,
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.all(
-                Radius.circular(10.0)
+                Radius.circular(50.0)
               )
             ),
         ),        
