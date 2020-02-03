@@ -13,31 +13,23 @@ class MyApp extends StatelessWidget {
         ),
         body: 
           Container(
-            margin: EdgeInsets.all(100.0),
-            width: 200.0,
-            height: 200.0,
+            margin: EdgeInsets.all(50.0),
+            width: 300.0,
+            height: 300.0,
             decoration: BoxDecoration(
-              gradient: RadialGradient(
-                //begin: Alignment(0.0, -1.0),
-                //end: Alignment(0.0, -0.8),
-                tileMode: TileMode.clamp,
-                // begin: Alignment.topCenter,
-                // end: Alignment.bottomCenter,
-                //stops: [0.5, 0.6, 0.7, 0.8],
-                radius: 0.25,
-                center: Alignment(0.0, 0.5),
-                colors: [Colors.blue,
-                         Colors.green,
-                         Colors.deepPurple,
-                         Colors.pink,
-                         ]),
               color: Colors.orange,
+              gradient: LinearGradient(
+                colors: [Colors.pink[50], Colors.pink[500]]
+              ),
+              image: DecorationImage(
+                image: NetworkImage('http://bit.ly/flutter_tiger')
+              ),
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.all(
                 Radius.circular(50.0)
               )
             ),
-        ),        
+        ),
       ),
     );
   }
